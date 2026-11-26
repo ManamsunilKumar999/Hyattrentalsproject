@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Products</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="product.css">
+
+</head>
+
+<body>
+    <header class="navbar">
+
+  <div class="logo">
+    <img src="images/logo.jpeg" alt="Hyatt Rentals Logo">
+  </div>
+
+ <div class="nav-links" id="navLinks">
+     <a href="index.html">Home</a>
+    <a href="./product.html" class="active">Products</a>
+     <a href="./about/about.html">About</a>
+    <a href="./contact/contact.html">Contact</a>
+  </div>
+
+  <div class="menu-btn" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+</header>
+
+<div class="main-container">
+
+<div class="top-header">
+<div class="search-wrapper">
+<input type="text" id="searchInput" placeholder="Search products...">
+</div>
+</div>
+<div  class="top-header" style="margin-top: 0%;">
+  <h1>Premium Party Collections </h1>
+</div>
+
+<div class="chip-row">
+<button class="chip-btn active" data-category="all">All</button>
+<button class="chip-btn" data-category="kitchen">Kitchen</button>
+<button class="chip-btn" data-category="crockery">Crockery</button>
+<button class="chip-btn" data-category="tables">Tables & Chairs</button>
+<button class="chip-btn" data-category="bar">Bar</button>
+<button class="chip-btn" data-category="glassware">Glassware</button>
+<button class="chip-btn" data-category="trucks">Trucks</button>
+</div>
+
+<section class="category-section" data-category="kitchen">
+<div class="section-title"><h2>Kitchen Equipments</h2></div>
+<div class="card-grid"></div>
+</section>
+
+<section class="category-section" data-category="crockery">
+<div class="section-title"><h2>Crockery</h2></div>
+<div class="card-grid"></div>
+</section>
+
+<section class="category-section" data-category="tables">
+<div class="section-title"><h2>Tables & Chairs</h2></div>
+<div class="card-grid"></div>
+</section>
+
+<section class="category-section" data-category="bar">
+<div class="section-title"><h2>Bar Equipments</h2></div>
+<div class="card-grid"></div>
+</section>
+
+<section class="category-section" data-category="glassware">
+<div class="section-title"><h2>Glassware</h2></div>
+<div class="card-grid"></div>
+</section>
+
+<section class="category-section" data-category="trucks">
+<div class="section-title"><h2>Trucks</h2></div>
+<div class="card-grid"></div>
+</section>
+
+</div>
+    <a href="https://wa.me/971559526105" 
+       class="whatsapp-float" 
+       target="_blank">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+<script src="product.js"></script>
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <!-- 1️⃣ LEFT -->
+        <div class="footer-left">
+            <a href="index.html">
+                <img src="images/hyatt logo.png" alt="Hyatt Kitchen Rentals Logo" class="footer-logo">
+            </a>
+            <p>
+                At Hyatt Kitchen Rentals, we combine quality equipment with dependable service to support hospitality businesses across all scales.
+            </p>
+        </div>
+
+        <!-- 2️⃣ CONTACT -->
+        <div class="footer-middle">
+            <h3>Contact Us</h3>
+
+            <p><i class="fa-solid fa-mobile-screen"></i>
+                <a href="tel:+971524343365">+971 524343365</a>
+            </p>
+
+            <p><i class="fa-solid fa-phone"></i>
+                <a href="tel:+97142620910">+971 42620910</a>
+            </p>
+
+            <p><i class="fa-solid fa-envelope"></i>
+                <a href="mailto:info@hyattrentals.ae">info@hyattrentals.ae</a>
+            </p>
+
+            <p><i class="fa-brands fa-whatsapp"></i>
+                <a href="https://wa.me/971559526105" target="_blank">
+                    +971 559526105
+                </a>
+            </p>
+        </div>
+
+        <!-- 3️⃣ QUICK LINKS (NOW SEPARATE COLUMN) -->
+        <div class="footer-quick">
+            <h3>Quick Links</h3>
+            <a href="index.html">Home</a>
+            <a href="./product.html">Products</a>
+            <a href="./about/about.html">About</a>
+            <a href="./contact/contact.html">Contact</a>
+        </div>
+
+        <!-- 4️⃣ PRODUCTS -->
+        <div class="footer-products">
+            <h3>Products</h3>
+            <a href="./product.html?data-category=kitchen">Kitchen Equipment</a>
+            <a href="./product.html?data-category=glassware">Glass Ware</a>
+            <a href="./product.html?data-category=tables">Tables & Chairs</a>
+            <a href="./product.html?data-category=crockery">Crockery & Cutlery</a>
+            <a href="./product.html?data-category=bar">Bar Equipments</a>
+            <a href="./product.html?data-category=trucks">Trucks</a>
+        </div>
+
+        <!-- 5️⃣ LOCATION -->
+        <div class="footer-right">
+            <h3>Our Location</h3>
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3609.358698756341!2d55.234207!3d25.1159525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f693a3d10336b%3A0x615727ef6bf418ce!2sHyatt%20Temporary%20Kitchens%20Rental%20LLC!5e0!3m2!1sen!2sae!4v1700000000000"
+                width="100%"
+                height="160"
+                style="border:0; border-radius:15px;"
+                loading="lazy">
+            </iframe>
+
+        </div>
+
+    </div>
+
+</footer>
+
+    <!-- COPYRIGHT -->
+    <div class="footer-bottom">
+        <p>© 2026 Hyatt Kitchen Rentals. All Rights Reserved.</p>
+    </div>
+
+</footer>
+
+
+</body>
+</html>

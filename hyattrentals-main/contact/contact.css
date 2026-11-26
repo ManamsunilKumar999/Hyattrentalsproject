@@ -1,0 +1,970 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+/*================= HEADER ================= */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: linear-gradient(135deg, #008080);
+  padding: 18px 40px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Logo stays left */
+.logo {
+  justify-self: start;
+}
+
+.logo img {
+  height: 50px;
+}
+
+/* Menu perfectly centered */
+.nav-links {
+  justify-self: center;
+  display: flex;
+  gap: 40px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  font-size: 16px;
+  position: relative;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0%;
+  height: 2px;
+  background: #d57629;
+  transition: 0.3s;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-links a.active::after {
+  width: 100%;
+  background: #d57629;
+}
+/* Hamburger */
+.menu-btn {
+  justify-self: end;
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.menu-btn span {
+  width: 25px;
+  height: 3px;
+  background: white;
+  border-radius: 5px;
+}
+html {
+  scroll-behavior: smooth;
+}
+/* When jumping to booking section, keep it below fixed navbar */
+#book-appointment {
+  scroll-margin-top: 110px;
+}
+/* ================= MOBILE VIEW ================= */
+
+@media (max-width: 768px) {
+
+  .menu-btn {
+    display: flex;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 75px;
+    right: -100%;
+    flex-direction: column;
+    background: #0f5156;
+    width: 220px;
+    padding: 25px;
+    border-radius: 10px;
+    transition: 0.3s ease;
+  }
+
+  .nav-links.active {
+    right: 20px;
+  }
+}
+
+/* HERO */
+
+.hero{
+    background: linear-gradient(135deg, #c3f1ef 0%, #b4f0ed 100%);
+    height:400px;
+    position:relative;
+}
+.hero{
+    background: linear-gradient(135deg#c3f1ef 0%, #b4f0ed 100%);;
+    padding: 150px 0;     /* remove fixed height */
+}
+.hero-image {
+    width: 90%;
+    max-width: 350px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 30px auto 0 auto;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+.hero-text{
+    margin-top:auto;
+}
+
+.hero-content{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100%;
+}
+
+.hero-text{
+    max-width:500px;
+}
+
+.hero-text h1{
+    color: #150c0c;
+    font-size:50px;
+    margin-bottom:5px;
+    margin-top: 60px; 
+}
+
+.hero-text p{
+    color: #474545;
+    font-size:16px;
+    line-height:1.6;
+}
+
+/* IMAGE POSITION */
+.hero {
+    background: linear-gradient(135deg, #c3f1ef 0%, #b4f0ed 100%);
+    padding: 120px 20px 80px; /* space for navbar */
+    text-align: center;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+.hero h1 {
+    font-size: 38px;
+}
+
+.hero p {
+    max-width: 600px;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* PERFECT CIRCLE IMAGE */
+.hero-image {
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.hero-img{
+    position:absolute;
+    right:7%;
+    bottom:-300px;   /* overlap white section */
+}
+
+.hero-img img{
+    width:400px;
+    height:600px;
+    object-fit:cover;
+    border-radius:300px 300px 0 0;
+}
+
+
+/* CONTACT INFO */
+.contact-info-section{
+    background: #f5f5f5;
+    padding: 80px 0;
+}
+.contact-section {
+    padding: 40px 20px;
+}
+
+
+.contact-info-flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.contact-left{
+    flex: 1;
+}
+
+.contact-left h2{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.contact-left p{
+    color:#474545;
+    margin-bottom: 30px;
+    max-width: 500px;
+}
+
+.contact-items{
+    display: flex;
+    gap: 40px;
+}
+
+.contact-item{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.contact-item .icon{
+    width: 45px;
+    height: 45px;
+    background:linear-gradient(135deg,#f38b2b);
+    color:rgb(105, 219, 219);
+    border-radius: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.contact-item h4{
+    font-size: 14px;
+    margin: 0;
+    font-weight: 600;
+}
+
+.contact-item span{
+    font-size: 16px;
+    color: #888;
+}
+
+/* ================= MOBILE RESPONSIVE FIX ================= */
+
+@media (max-width: 992px){
+
+    /* HERO FIX */
+    .hero{
+        height: auto;              /* remove fixed height */
+        padding: 120px 20px 60px;  /* adjust spacing */
+    }
+
+    .hero-content{
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+    }
+
+    .hero-text h1{
+        font-size: 36px;
+    }
+
+    .hero-text p{
+        font-size: 15px;
+    }
+
+    /* Disable absolute image on mobile */
+    .hero-img{
+        position: relative;
+        right: auto;
+        bottom: auto;
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    .hero-img img{
+        width: 260px;
+        height: 400px;
+        max-width: 100%;
+    }
+
+    /* If using circle image */
+    .hero-image{
+        width: 240px;
+        height: 240px;
+    }
+}
+
+
+/* EXTRA SMALL DEVICES */
+@media (max-width: 600px){
+
+    .hero-text h1{
+        font-size: 28px;
+    }
+
+    .hero-text p{
+        font-size: 14px;
+    }
+
+    .hero-img img{
+        width: 220px;
+        height: 350px;
+    }
+
+    .hero-image{
+        width: 200px;
+        height: 200px;
+    }
+
+    /* CONTACT STACK */
+    .contact-info-flex{
+        flex-direction: column;
+        gap: 25px;
+        text-align: center;
+    }
+
+    .contact-items{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .contact-item{
+        justify-content: center;
+    }
+
+}
+
+/* ===============================
+   FORM + LOCATION SECTION
+=================================*/
+
+.contact-section{
+    display: flex;
+    gap: 40px;
+    padding: 60px 80px;
+    background: #f5f5f5;
+}
+
+/* FORM BOX */
+.contact-form-box {
+    flex: 1;
+    background: linear-gradient(135deg, #c3f1ef 0%, #b4f0ed 100%);
+    padding: 40px;
+    border-radius: 15px;
+    min-height: 520px;
+}
+
+.contact-form-box h3 {
+    margin-bottom: 10px;
+    color:#0c0b0b;
+}
+
+.contact-form-box p {
+    color:#474545 ;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.contact-form-box input,
+.contact-form-box textarea {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 15px;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+}
+
+.contact-form-box textarea {
+    border-radius: 15px;
+    height: 110px;
+    resize: none;
+}
+
+.contact-form-box button {
+    background:#f38b2b;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+/* LOCATION */
+.contact-location {
+    flex: 1;
+    min-height: 520px;
+}
+
+.contact-location h3 {
+    margin-bottom: 10px;
+}
+
+.contact-location p {
+    margin-bottom: 20px;
+    color: #777;
+}
+
+.contact-location iframe {
+    width: 100%;
+    height: 350px;
+    border-radius: 12px;
+    border: none;
+}
+
+
+/* ===============================
+   FREE BOOKING SECTION
+=================================*/
+
+.free-booking{
+    background: linear-gradient(135deg, #c3f1ef 0%, #b4f0ed 100%);
+    padding: 70px 80px;
+    color: white;
+}
+
+.booking-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+/* LEFT TEXT */
+.booking-text{
+    flex: 1;
+}
+
+.booking-text h2{
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.booking-text p{
+    font-size: 16px;
+    max-width: 400px;
+}
+
+/* ===============================
+   FREE BOOKING SECTION
+=================================*/
+
+.free-booking{
+    background: linear-gradient(135deg, #c3f1ef 0%, #b4f0ed 100%);
+    padding: 70px 80px;
+}
+
+.booking-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+/* LEFT SIDE TEXT */
+.booking-text{
+    flex: 1;
+}
+
+.booking-text h2{
+    color:#0c0b0b;
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+.booking-text h3{
+    color:#0c0b0b;
+}
+.booking-text p{
+    color:#474545 ;
+    font-size: 16px;
+    max-width: 400px;
+}
+
+/* RIGHT SIDE FORM */
+.booking-form{
+    flex: 1;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.booking-form input{
+    padding: 14px;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    flex: 1;
+}
+
+/* WHATSAPP BUTTON */
+.whatsapp-btn{
+    background: #25D366;
+    color: white;
+    padding: 14px 28px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+    transition: 0.3s;
+}
+/* When accessed via booking=true, show only booking section */
+body.booking-only .hero,
+body.booking-only .contact-info-section,
+body.booking-only .contact-section,
+body.booking-only .footer {
+    display: none !important;
+}
+
+/* Make booking section appear right below header when accessed via booking parameter */
+body.booking-only .free-booking {
+    margin-top: 0 !important;
+    padding-top: 120px !important;
+    min-height: calc(100vh - 100px);
+    display: block !important;
+}
+
+body.booking-only .booking-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.whatsapp-btn:hover{
+    background: #1ebe5d;
+    transform: translateY(-3px);
+}
+
+/* RESPONSIVE */
+@media(max-width: 768px){
+    .booking-container{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .booking-form{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .booking-form input,
+    .whatsapp-btn{
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+}
+
+
+/*================ FOOTER ================= */
+
+.footer {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 60px 0 0;   /* removed side padding */
+    font-size: 18px;
+    color: #fff;
+    overflow: hidden;
+
+    background: linear-gradient(135deg, #008080);
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 -8px 25px rgba(0, 0, 0, 0.35);
+}
+/* ================= CONTAINER ================= */
+.footer-container {
+    max-width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 32% auto auto auto 32%;
+    gap: 20px;
+    padding: 0 10px 30px;
+}
+
+/* ================= COMMON COLUMN STYLE ================= */
+.footer-left,
+.footer-middle,
+.footer-quick,
+.footer-products,
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* ================= LOGO ================= */
+.footer-logo {
+    height: 65px;
+}
+
+.footer-left p {
+    margin-top: 15px;
+    line-height: 1.6;
+    color: rgba(255,255,255,0.85);
+}
+
+/* ================= HEADINGS ================= */
+.footer h3 {
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* ================= CONTACT ================= */
+.footer-middle p {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+    color: rgba(255,255,255,0.85);
+}
+
+.footer-middle i {
+    color: #ff7a00;
+    min-width: 18px;
+}
+
+/* ================= LINKS (GLOBAL) ================= */
+.footer a {
+    color: rgba(255,255,255,0.9);
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.footer a:hover {
+    color: #ff7a00;
+    padding-left: 4px;
+}
+
+/* ================= QUICK LINKS ================= */
+.footer-quick a,
+.footer-products a {
+    display: block;
+    margin-bottom: 6px;
+}
+
+/* ================= MAP ================= */
+.footer-right {
+    overflow: hidden;   /* prevents scroll */
+}
+.footer-right iframe {
+    width: 100%;
+    height: 160px;
+    border: 0;
+    border-radius: 12px;
+    display: block;
+    overflow: hidden;
+}
+.footer-right {
+    grid-column: span 1;
+}
+.footer-right p {
+    display: flex;
+    gap: 6px;
+    line-height: 1.5;
+    margin-bottom: 8px;
+    color: rgba(255,255,255,0.85);
+}
+/* ================= COPYRIGHT ================= */
+.footer-bottom {
+    width: 100%;
+    margin: 0;              /* removed gap */
+    padding: 15px 0;
+    text-align: center;
+
+    background: #0c3f43;
+    border-top: 1px solid rgba(255,255,255,0.15);
+
+    font-size: 13px;
+    letter-spacing: 0.5px;
+}
+.footer-bottom p {
+    margin: 0;
+}
+/* ================= FOOTER RESPONSIVE ================= */
+
+@media (max-width: 992px) {
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
+
+  .footer {
+    text-align: center;
+  }
+
+  .footer-left,
+  .footer-middle,
+  .footer-products,
+  .footer-right {
+    align-items: center;
+  }
+
+  .footer-right iframe {
+    height: 200px;
+  }
+}
+.footer-quick {
+        text-align: center;
+        align-items: center;
+}
+/* ================= WHATSAPP FLOAT ================= */
+
+.whatsapp-float {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+
+    width: 60px;
+    height: 60px;
+
+    background: #25D366;
+    color: white;
+
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 28px;
+    text-decoration: none;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+
+    z-index: 9999;
+    transition: 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+}
+
+
+/* HERO RESPONSIVE FIX */
+@media (max-width: 992px){
+
+    .hero{
+        padding: 60px 20px;
+        text-align: center;
+    }
+
+    .hero-content{
+        flex-direction: column;
+    }
+
+    .hero-text h1{
+        font-size: 36px;
+    }
+
+    .hero-img{
+        position: relative;   /* remove absolute */
+        right: auto;
+        bottom: auto;
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    .hero-img img{
+        width: 280px;
+        height: 420px;
+        border-radius: 200px 200px 0 0;
+        margin: auto;
+    }
+}
+
+@media (max-width: 600px){
+
+    .hero-text h1{
+        font-size: 28px;
+    }
+
+    .hero-text p{
+        font-size: 14px;
+    }
+
+    .hero-img img{
+        width: 220px;
+        height: 350px;
+    }
+}@media (max-width: 768px){
+
+    .contact-info-section{
+        padding: 50px 20px;
+    }
+
+    .contact-items{
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+@media (max-width: 768px){
+
+    .free-booking{
+        padding: 50px 20px;
+    }
+
+    .booking-text h2{
+        font-size: 24px;
+    }
+
+    .booking-text p{
+        font-size: 14px;
+    }
+}
+@media (max-width: 768px){
+
+    .nav ul{
+        flex-direction: column;
+        gap: 15px;
+        background: #0b384e;
+        padding: 20px;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 100%;
+        display: none;
+    }
+
+    .nav ul.active{
+        display: flex;
+    }
+}
+/* ===============================
+   CONTACT SECTION MOBILE FIX
+=================================*/
+
+@media (max-width: 992px){
+
+    .contact-section{
+        flex-direction: column;   /* Stack form + map */
+        padding: 40px 20px;       /* Reduce side spacing */
+        gap: 30px;
+    }
+
+    .contact-form-box{
+        width: 100%;
+        min-height: auto;
+    }
+
+    .contact-location{
+        width: 100%;
+        min-height: auto;
+    }
+
+    .contact-location iframe{
+        width: 100%;
+        height: 300px;
+    }
+}
+
+/* Extra Small Devices */
+@media (max-width: 600px){
+
+    .contact-form-box{
+        padding: 25px;
+    }
+
+    .contact-form-box h3{
+        font-size: 20px;
+    }
+
+    .contact-form-box p{
+        font-size: 13px;
+    }
+
+    .contact-form-box input,
+    .contact-form-box textarea{
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .contact-form-box button{
+        width: 100%;
+    }
+
+    .contact-location h3{
+        font-size: 20px;
+    }
+
+    .contact-location p{
+        font-size: 13px;
+    }
+
+}
+@media (max-width: 768px) {
+
+    .hero-content {
+        text-align: center;
+        padding: 20px;
+    }
+
+    h1, h2 {
+        font-size: 22px;
+    }
+
+    .image-box {
+        width: 80%;
+    }
+
+    .contact-info {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+
+

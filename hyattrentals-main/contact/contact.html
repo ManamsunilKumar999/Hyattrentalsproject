@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us</title>
+<link rel="stylesheet" href="contact.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+   <!-- ================= HEADER ================= -->
+    <!-- NAVBAR -->
+<header class="navbar">
+
+  <div class="logo">
+    <img src="logo.jpeg" alt="Hyatt Rentals Logo">
+  </div>
+
+  <div class="nav-links" id="navLinks">
+     <a href="../index.html">Home</a>
+    <a href="../product.html">Products</a>
+     <a href="../about/about.html">About</a>
+    <a href="./contact.html" class="active">Contact</a>
+  </div>
+
+
+  <div class="menu-btn" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+</header>
+
+
+<!-- HERO SECTION -->
+<section class="hero">
+    <div class="container hero-flex">
+        <div class="hero-text">
+            <h1>Contact US</h1>
+            <p>We are here to support your temporary kitchen and event equipment rental needs. 
+             Get in touch with our team for quick assistance and customized rental solutions..</p>
+        </div>
+
+        <div class="hero-img">
+            <img src="hero pic.png" alt="">
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT INFO STYLE 2 -->
+<!-- CONTACT INFORMATION SECTION -->
+<section class="contact-info-section">
+    <div class="container contact-info-flex">
+
+        <!-- LEFT SIDE -->
+        <div class="contact-left">
+            <h2>Contact Information</h2>
+   <p>Contact us today for reliable temporary kitchen and event equipment rental support across the UAE.</p>
+
+            <div class="contact-items">
+
+                <div class="contact-item">
+                    <div class="icon">📞</div>
+                    <div>
+                        <h4>+971 559526105</h4>
+                        <span>Call us for rental inquiries</span>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="icon">✉</div>
+                    <div>
+                        
+                        <h4>info@hyattrentals.ae</h4>
+                        <span>Email us your requirements</span>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="icon">📍</div>
+                    <div>
+                        <h4>Al Quoz Industrial Area  </h4>
+                        <span>United Arab Emirates</span>
+                    </div>
+                </div>
+
+            </div>
+
+    </div>
+</section>
+
+<section class="contact-section">
+
+    <!-- FORM BOX -->
+     <!-- Left Form -->
+        <div class="contact-form-box">
+            <h3>Get In Touch !</h3>
+            <p>Hyatt Temporary Kitchen Rentals |</p>
+
+             <form id="whatsappForm">
+                <input type="text" id="name" placeholder="Name" required>
+                <input type="tel" id="number" placeholder="Phone Number" required>
+                <input type="email" id="email" placeholder="Email" required>
+                <textarea id="message" placeholder="Message" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+
+    <!-- LOCATION BOX -->
+    <div class="contact-location">
+        <h3>Our Location</h3>
+        <p>     Hyatt Temporary Kitchens Rental LLC,<br>
+                    Behind Emirates Glass,<br>
+                    Opp. Cosmos, Al Quoz Industrial Area 4,<br>
+                    Dubai, UAE.</p><br>
+
+
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3609.358698756341!2d55.234207!3d25.1159525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f693a3d10336b%3A0x615727ef6bf418ce!2sHyatt%20Temporary%20Kitchens%20Rental%20LLC!5e0!3m2!1sen!2sae!4v1700000000000"
+            allowfullscreen=""
+            loading="lazy"></iframe>
+    </div>
+
+</section>
+
+
+<!-- NEWSLETTER -->
+<section class="free-booking">
+
+    <div class="booking-container">
+
+        <!-- LEFT TEXT -->
+        <div class="booking-text">
+           <h2>Book Your Free Appointment</h2>
+
+            <p>
+                Get expert advice and personalized solutions.
+                Schedule your free booking today!
+            </p><br>
+
+        <div class="working-time">
+            <h3>Working Time</h3><br>
+            <p> We Are Open :<strong></strong> 24/7</strong> – Ready to Serve You Anytime</p>
+
+        </div>
+        </div>
+        
+        <!-- RIGHT FORM STYLE -->
+        <div class="booking-form">
+            <input type="text" id="bookingName" placeholder="Your Name" required>
+            <input type="tel" id="bookingNumber" placeholder="Number" required>
+            <input type="date" id="bookingDate" required>
+
+             <button type="button" class="whatsapp-btn" onclick="sendBookingToWhatsApp()">
+            <i class="fa-brands fa-whatsapp"></i> Book Now
+             </button>
+        </div>
+
+
+    </div>
+
+</section>
+
+ 
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <!-- 1️⃣ LEFT -->
+        <div class="footer-left">
+            <a href="index.html">
+                <img src="./logo.jpeg" alt="Hyatt Kitchen Rentals Logo" class="footer-logo">
+            </a>
+            <p>
+                At Hyatt Kitchen Rentals, we combine quality equipment with dependable service to support hospitality businesses across all scales.
+            </p>
+        </div>
+
+        <!-- 2️⃣ CONTACT -->
+        <div class="footer-middle">
+            <h3>Contact Us</h3>
+
+            <p><i class="fa-solid fa-mobile-screen"></i>
+                <a href="tel:+971524343365">+971 524343365</a>
+            </p>
+
+            <p><i class="fa-solid fa-phone"></i>
+                <a href="tel:+97142620910">+971 42620910</a>
+            </p>
+
+            <p><i class="fa-solid fa-envelope"></i>
+                <a href="mailto:info@hyattrentals.ae">info@hyattrentals.ae</a>
+            </p>
+
+            <p><i class="fa-brands fa-whatsapp"></i>
+                <a href="https://wa.me/971559526105" target="_blank">
+                    +971 559526105
+                </a>
+            </p>
+        </div>
+
+        <!-- 3️⃣ QUICK LINKS (NOW SEPARATE COLUMN) -->
+        <div class="footer-quick">
+            <h3>Quick Links</h3>
+            <a href="../index.html">Home</a>
+            <a href="../product.html">Products</a>
+            <a href="../about/about.html">About</a>
+            <a href="./contact.html">Contact</a>
+        </div>
+
+        <!-- 4️⃣ PRODUCTS -->
+        <div class="footer-products">
+            <h3>Products</h3>
+            <a href="../product.html?data-category=kitchen">Kitchen Equipment</a>
+            <a href="../product.html?data-category=glassware">Glass Ware</a>
+            <a href="../product.html?data-category=tables">Tables & Chairs</a>
+            <a href="../product.html?data-category=crockery">Crockery & Cutlery</a>
+            <a href="../product.html?data-category=bar">Bar Equipments</a>
+            <a href="../product.html?data-category=trucks">Trucks</a>
+        </div>
+
+        <!-- 5️⃣ LOCATION -->
+        <div class="footer-right">
+            <h3>Our Location</h3>
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3609.358698756341!2d55.234207!3d25.1159525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f693a3d10336b%3A0x615727ef6bf418ce!2sHyatt%20Temporary%20Kitchens%20Rental%20LLC!5e0!3m2!1sen!2sae!4v1700000000000"
+                width="100%"
+                height="160"
+                style="border:0; border-radius:15px;"
+                loading="lazy">
+            </iframe>
+
+        </div>
+
+    </div>
+
+</footer>
+
+    <!-- COPYRIGHT -->
+    <div class="footer-bottom">
+        <p>© 2026 Hyatt Kitchen Rentals. All Rights Reserved.</p>
+    </div>
+
+</footer>
+
+<!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/971559526105" 
+       class="whatsapp-float" 
+       target="_blank">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+
+<script src="contact.js"> </script>
+
+</body>
+</html>
